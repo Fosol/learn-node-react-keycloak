@@ -1,0 +1,6 @@
+SELECT *
+FROM test
+
+SELECT *
+FROM test
+WHERE updatedon = '2019-11-07T00:23:53.346Z'

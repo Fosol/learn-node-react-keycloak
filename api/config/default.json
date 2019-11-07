@@ -1,0 +1,27 @@
+{
+  "express": {
+    "port": 3000
+  },
+  "logging": {
+    "loglevel": "info",
+    "morgan": {
+      "format": "tiny"
+    }
+  },
+  "keycloak": {
+    "realm": "demo",
+    "auth-server-url": "http://localhost:8080/auth",
+    "ssl-required": "none",
+    "resource": "demo-api",
+    "verify-token-audience": true,
+    "credentials": {
+      "secret": "<USE ENV VAR>"
+    },
+    "use-resource-role-mappings": true,
+    "confidential-port": 0,
+    "policy-enforcer": {}
+  },
+  "connectionstrings": {
+    "demo": "<USE ENV VAR>"
+  }
+}
