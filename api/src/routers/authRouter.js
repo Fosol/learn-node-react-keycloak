@@ -17,14 +17,16 @@ export default function route(options) {
   const keycloak = options.keycloak;
 
   router.get('/login', (req, res, _next) =>
-    redirectToLogin({keycloak, request: req, response: res}));
+    redirectToLogin({keycloak, request: req, response: res}),
+  );
 
   router.post('/auto', (req, res, next) =>
-    authenticate({keycloak, request: req, response: res, next}));
+    authenticate({keycloak, request: req, response: res, next}),
+  );
 
-  router.get('/unauthorized', (req, res, next) => {
-    res.sendStatus(403).json({error: 'Unauthorized'});
-  });
+  router.get('/unauthorized', (req, res, next) =>
+    res.sendStatus(403).json({error: 'Unauthorized'}),
+  );
 
   return router;
-};
+}

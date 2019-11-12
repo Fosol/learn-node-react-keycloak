@@ -1,49 +1,48 @@
 {
-	"folders": [
-		{
-			"path": "keycloak"
-		},
-		{
-			"path": "api"
-		},
-		{
-			"path": "app"
-		},
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"sqltools.connections": [
-			{
-				"database": "mydb",
-				"dialect": "PostgreSQL",
-				"isActive": false,
-				"isConnected": false,
-				"name": "docker-54320",
-				"password": "pwd0123456789",
-				"port": 54320,
-				"server": "localhost",
-				"username": "john"
-			},
-			{
-				"database": "keycloak",
-				"dialect": "PostgreSQL",
-				"name": "keycloak-postgres",
-				"password": "password",
-				"port": 5432,
-				"server": "localhost",
-				"username": "keycloak"
-			}
-		],
-		"files.eol": "\n",
-		"cSpell.words": [
-			"Postgres",
-			"connectionstrings",
-			"keycloak",
-			"loglevel",
-			"npmlog",
-			"postgresql"
-		]
-	}
+  "folders": [
+    {
+      "path": "keycloak"
+    },
+    {
+      "path": "api"
+    },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "sqltools.connections": [
+      {
+        "database": "mydb",
+        "dialect": "PostgreSQL",
+        "isActive": false,
+        "isConnected": false,
+        "name": "docker-54320",
+        "password": "pwd0123456789",
+        "port": 54320,
+        "server": "localhost",
+        "username": "john"
+      },
+      {
+        "database": "keycloak",
+        "dialect": "PostgreSQL",
+        "name": "keycloak-postgres",
+        "password": "password",
+        "port": 5432,
+        "server": "localhost",
+        "username": "keycloak"
+      }
+    ],
+    "files.eol": "\n",
+    "cSpell.words": [
+      "Postgres",
+      "connectionstrings",
+      "datasource",
+      "keycloak",
+      "loglevel",
+      "npmlog",
+      "postgresql",
+      "resave"
+    ]
+  }
 }

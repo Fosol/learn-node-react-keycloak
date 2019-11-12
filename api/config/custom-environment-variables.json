@@ -1,13 +1,13 @@
 {
-    "express": {
-        "port": "EXPRESS_PORT"
-    },
-    "keycloak": {
-        "credentials": {
-            "secret": "NODE_KEYCLOAK_SECRET"
-        }
-    },
-    "connectionstrings": {
-        "demo": "NODE_CONNECTION_STRING"
+  "express": {
+    "port": "EXPRESS_PORT"
+  },
+  "keycloak": {
+    "credentials": {
+      "secret": "KEYCLOAK_SECRET"
     }
+  },
+  "connectionstrings": {
+    "demo": "POSTGRESQL_CONNECTION_STRING"
+  }
 }

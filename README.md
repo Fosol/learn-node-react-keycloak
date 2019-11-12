@@ -1,7 +1,7 @@
 # Learn Node, React and KeyCloak
 
 This project is to help understand how to get Node, React and KeyCloak working together.
-Each project should be hosted in its own container, however there are communication issues with Keycloak when doing this for some reason.
+Each project should be hosted in its own container, but the API and web app can be run locally if required.
 
 # Setup
 

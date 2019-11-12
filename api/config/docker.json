@@ -1,0 +1,11 @@
+{
+  "keycloak": {
+    "auth-server-url": "http://host.docker.internal:8080/auth"
+  },
+  "datasource": {
+    "host": "host.docker.internal:54320"
+  },
+  "connectionstrings": {
+    "demo": "<USE ENV VAR>"
+  }
+}

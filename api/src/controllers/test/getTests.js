@@ -12,7 +12,6 @@ import * as service from '../../services/test';
 export default function(req, res, next) {
   service.all(this.db)
       .then((data) => {
-        debugger;
         res.status(200)
             .json({
               status: 'success',

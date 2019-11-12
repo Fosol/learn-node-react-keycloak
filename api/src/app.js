@@ -16,7 +16,11 @@ import moment from 'moment';
 import Keycloak from 'keycloak-connect';
 
 const client = new Postgres();
-const db = client(config.get('connectionstrings.demo'));
+const db = client(
+    config
+        .get('connectionstrings.demo')
+        .replace('{HOST}', config.get('datasource.host')),
+);
 const app = express();
 
 // Use moment to convert the postgresql timestamp values.

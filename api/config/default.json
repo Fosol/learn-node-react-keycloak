@@ -19,7 +19,11 @@
     },
     "use-resource-role-mappings": true,
     "confidential-port": 0,
-    "policy-enforcer": {}
+    "policy-enforcer": {},
+    "bearer-only": true
+  },
+  "datasource": {
+    "host": "localhost:54320"
   },
   "connectionstrings": {
     "demo": "<USE ENV VAR>"

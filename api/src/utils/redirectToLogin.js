@@ -10,9 +10,15 @@ import uuid from './uuid';
  * @return {void}
  */
 export default function redirectToLogin(options) {
-  options = Object.assign({
-    keycloak, request, response, redirectUrl: '/',
-  }, options);
+  options = Object.assign(
+      {
+        keycloak,
+        request,
+        response,
+        redirectUrl: '/',
+      },
+      options,
+  );
   const keycloak = options.keycloak;
   const request = options.request;
   const response = options.response;
@@ -23,7 +29,11 @@ export default function redirectToLogin(options) {
   const protocol = request.protocol;
   const hasQuery = ~(request.originalUrl || request.url).indexOf('?');
 
-  const redirectUrl = `${protocol}://${host}${(port === '' ? '' : ':' + port)}${options.redirectUrl}${(hasQuery ? '&' : '?') + 'auth_callback=0'}`;
+  const redirectUrl = request.query.redirect_url ?
+    request.query.redirect_url + '?auth_callback=0' :
+    `${protocol}://${host}${port === '' ? '' : ':' + port}${
+      options.redirectUrl
+    }${(hasQuery ? '&' : '?') + 'auth_callback=0'}`;
 
   if (request.session) {
     request.session.auth_redirect_uri = redirectUrl;
